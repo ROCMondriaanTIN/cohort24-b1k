@@ -1,0 +1,25 @@
+.user-card{
+    background-color: maroon;
+    border: 2px solid black;
+    width: 300px;
+    border-radius: 10%;
+}
+
+.user-name{
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.user-age{
+    color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.hidden{
+    display: none;
+}
