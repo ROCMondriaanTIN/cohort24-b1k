@@ -1,4 +1,4 @@
-.user-card{
+/* .user-card{
     background-color: maroon;
     border: 2px solid black;
     width: 300px;
@@ -22,4 +22,9 @@
 
 .hidden{
     display: none;
+} */
+
+.users{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }

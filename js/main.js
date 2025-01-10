@@ -155,14 +155,35 @@
 // const user = JSON.parse(localStorage.getItem('user'));
 // console.log(user);
 
-const gameOverDiv = document.querySelector('.game-over');
+// const gameOverDiv = document.querySelector('.game-over');
 //Functie game over
 
-console.log(gameOverDiv.classList);
-gameOverDiv.classList.remove('hidden');
+// console.log(gameOverDiv.classList);
+// gameOverDiv.classList.remove('hidden');
 
 // setTimeout(()=>{
 //     gameOverDiv.classList.add('hidden');
 // }, 2000);
 
-gameOverDiv.style.border = '1px solid black';
+// gameOverDiv.style.border = '1px solid black';
+
+fetch('https://dummyjson.com/users')
+.then(JsonData => JsonData.json())
+.then(data => showData(data));
+
+const usersDiv = document.querySelector('.users');
+
+function showData(data){
+    console.log(data);
+    const users = data.users;
+    console.log(users);
+
+    for(let i = 0; i < users.length; i++){
+        usersDiv.innerHTML += `
+        <div class="user">
+        <img src="${users[i].image}">
+        <p>${users[i].firstName}</p>
+        </div>
+        `;
+    }
+}
